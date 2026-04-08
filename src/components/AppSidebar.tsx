@@ -35,7 +35,7 @@ export function AppSidebar() {
         {!collapsed && (
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-lg bg-sidebar-primary flex items-center justify-center">
-              <Sparkles className="h-4 w-4 text-sidebar-primary-foreground" />
+              <Satellite className="h-4 w-4 text-sidebar-primary-foreground" />
             </div>
             <div>
               <h2 className="text-sm font-bold text-sidebar-foreground">GTK GeoAI</h2>
@@ -46,7 +46,7 @@ export function AppSidebar() {
         {collapsed && (
           <div className="flex justify-center">
             <div className="h-8 w-8 rounded-lg bg-sidebar-primary flex items-center justify-center">
-              <Sparkles className="h-4 w-4 text-sidebar-primary-foreground" />
+              <Satellite className="h-4 w-4 text-sidebar-primary-foreground" />
             </div>
           </div>
         )}
