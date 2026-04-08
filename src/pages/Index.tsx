@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Gem, Shield, Map, Database, FlaskConical, Sparkles, ArrowRight } from "lucide-react";
+import { Gem, Shield, Map, Database, Satellite, Sparkles, ArrowRight } from "lucide-react";
 import { DashboardLayout } from "@/components/DashboardLayout";
 import { useEffect, useRef, useState } from "react";
 
@@ -34,6 +34,80 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
   }, [target]);
 
   return <span ref={ref}>{count}{suffix}</span>;
+}
+
+function SatelliteBackground() {
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* Orbital rings */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px]">
+        <div className="absolute inset-0 rounded-full border border-primary/[0.06] animate-[spin_60s_linear_infinite]" />
+        <div className="absolute inset-[60px] rounded-full border border-accent/[0.06] animate-[spin_45s_linear_infinite_reverse]" />
+        <div className="absolute inset-[120px] rounded-full border border-primary/[0.04] animate-[spin_80s_linear_infinite]" />
+      </div>
+
+      {/* Satellite 1 — outer orbit */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] animate-[spin_20s_linear_infinite]">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="relative">
+            <Satellite className="h-5 w-5 text-primary/30 animate-pulse" />
+            <div className="absolute inset-0 h-5 w-5 bg-primary/20 rounded-full blur-md" />
+          </div>
+        </div>
+      </div>
+
+      {/* Satellite 2 — middle orbit */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] md:w-[680px] md:h-[680px] animate-[spin_15s_linear_infinite_reverse]">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="relative">
+            <Satellite className="h-4 w-4 text-accent/30 animate-pulse" style={{ animationDelay: "1s" }} />
+            <div className="absolute inset-0 h-4 w-4 bg-accent/20 rounded-full blur-md" />
+          </div>
+        </div>
+      </div>
+
+      {/* Satellite 3 — inner orbit */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] md:w-[560px] md:h-[560px] animate-[spin_25s_linear_infinite]">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+          <div className="relative">
+            <Satellite className="h-3.5 w-3.5 text-primary/20 animate-pulse" style={{ animationDelay: "2s" }} />
+            <div className="absolute inset-0 h-3.5 w-3.5 bg-primary/15 rounded-full blur-sm" />
+          </div>
+        </div>
+      </div>
+
+      {/* Scan lines */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[600px] md:h-[600px] animate-[spin_30s_linear_infinite]">
+        <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+      </div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[600px] md:h-[600px] animate-[spin_40s_linear_infinite_reverse]">
+        <div className="absolute top-0 left-1/2 h-full w-[1px] bg-gradient-to-b from-transparent via-accent/10 to-transparent" />
+      </div>
+
+      {/* Dots / data points */}
+      {[
+        { top: "20%", left: "15%", delay: "0s", size: "1.5px" },
+        { top: "35%", left: "80%", delay: "2s", size: "2px" },
+        { top: "70%", left: "25%", delay: "1s", size: "2px" },
+        { top: "60%", left: "75%", delay: "3s", size: "1.5px" },
+        { top: "15%", left: "60%", delay: "1.5s", size: "1px" },
+        { top: "80%", left: "50%", delay: "0.5s", size: "2px" },
+      ].map((dot, i) => (
+        <div
+          key={i}
+          className="absolute rounded-full bg-primary/20 animate-pulse"
+          style={{
+            top: dot.top,
+            left: dot.left,
+            width: dot.size,
+            height: dot.size,
+            animationDelay: dot.delay,
+            animationDuration: "3s",
+          }}
+        />
+      ))}
+    </div>
+  );
 }
 
 const tools = [
@@ -69,26 +143,19 @@ const tools = [
     url: "/data-recommender",
     colorVar: "--geo-rock",
   },
-  {
-    title: "Geochemical Anomaly Explainer",
-    description: "Input element concentrations and get AI interpretation relative to Finnish background levels.",
-    icon: FlaskConical,
-    badge: "RAG + Quantitative",
-    url: "/geochemical-explainer",
-    colorVar: "--geo-earth",
-  },
 ];
 
 export default function Index() {
   return (
     <DashboardLayout>
       <div className="min-h-full">
-        {/* Hero with gradient */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10 py-16 px-6 md:px-10">
+        {/* Hero with satellite animation */}
+        <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10 py-20 px-6 md:px-10">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--geo-water)/0.08),transparent_50%),radial-gradient(ellipse_at_bottom_left,hsl(var(--geo-mineral)/0.08),transparent_50%)]" />
+          <SatelliteBackground />
           <div className="relative max-w-4xl mx-auto text-center space-y-5">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-xs font-medium text-primary animate-fade-in">
-              <Sparkles className="h-3.5 w-3.5" /> Generative AI for Geological Data
+              <Satellite className="h-3.5 w-3.5" /> Generative AI for Geological Data
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "both" }}>
               GTK GeoAI Toolkit
@@ -102,7 +169,7 @@ export default function Index() {
 
         <div className="max-w-6xl mx-auto px-6 md:px-10 space-y-12 pb-12">
           {/* Tool Cards */}
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 -mt-8">
+          <div className="grid gap-5 md:grid-cols-2 -mt-8">
             {tools.map((tool, i) => (
               <Link key={tool.url} to={tool.url} className="animate-fade-in" style={{ animationDelay: `${0.15 + i * 0.08}s`, animationFillMode: "both" }}>
                 <Card className="h-full group relative overflow-hidden border-border/60 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
@@ -150,7 +217,7 @@ export default function Index() {
                 </div>
                 <div className="space-y-1">
                   <p className="text-3xl md:text-4xl font-bold text-foreground tabular-nums">
-                    <AnimatedCounter target={5} />
+                    <AnimatedCounter target={4} />
                   </p>
                   <p className="text-sm text-muted-foreground">AI-Powered Tools</p>
                 </div>

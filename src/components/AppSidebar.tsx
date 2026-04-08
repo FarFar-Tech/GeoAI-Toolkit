@@ -1,4 +1,4 @@
-import { Gem, Shield, Map, Database, FlaskConical, Home, Sparkles } from "lucide-react";
+import { Gem, Shield, Map, Database, Home, Satellite } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -22,7 +22,6 @@ const tools = [
   { title: "Environmental Risk Screener", url: "/environmental-risk", icon: Shield, badge: "RAG" },
   { title: "Map Interpreter", url: "/map-interpreter", icon: Map, badge: "VLM" },
   { title: "Data Recommender", url: "/data-recommender", icon: Database, badge: "Tools" },
-  { title: "Geochemical Explainer", url: "/geochemical-explainer", icon: FlaskConical, badge: "RAG" },
 ];
 
 export function AppSidebar() {
