@@ -9,7 +9,7 @@ import MineralProspectivity from "./pages/MineralProspectivity";
 import EnvironmentalRisk from "./pages/EnvironmentalRisk";
 import MapInterpreter from "./pages/MapInterpreter";
 import DataRecommender from "./pages/DataRecommender";
-import GeochemicalExplainer from "./pages/GeochemicalExplainer";
+
 import NotFound from "./pages/NotFound";
 
 
@@ -28,7 +28,7 @@ const App = () => (
           <Route path="/environmental-risk" element={<EnvironmentalRisk />} />
           <Route path="/map-interpreter" element={<MapInterpreter />} />
           <Route path="/data-recommender" element={<DataRecommender />} />
-          <Route path="/geochemical-explainer" element={<GeochemicalExplainer />} />
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

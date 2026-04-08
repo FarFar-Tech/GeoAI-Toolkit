@@ -1,4 +1,4 @@
-import { Gem, Shield, Map, Database, FlaskConical, Home, Sparkles } from "lucide-react";
+import { Gem, Shield, Map, Database, Home, Satellite } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -22,7 +22,6 @@ const tools = [
   { title: "Environmental Risk Screener", url: "/environmental-risk", icon: Shield, badge: "RAG" },
   { title: "Map Interpreter", url: "/map-interpreter", icon: Map, badge: "VLM" },
   { title: "Data Recommender", url: "/data-recommender", icon: Database, badge: "Tools" },
-  { title: "Geochemical Explainer", url: "/geochemical-explainer", icon: FlaskConical, badge: "RAG" },
 ];
 
 export function AppSidebar() {
@@ -36,7 +35,7 @@ export function AppSidebar() {
         {!collapsed && (
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-lg bg-sidebar-primary flex items-center justify-center">
-              <Sparkles className="h-4 w-4 text-sidebar-primary-foreground" />
+              <Satellite className="h-4 w-4 text-sidebar-primary-foreground" />
             </div>
             <div>
               <h2 className="text-sm font-bold text-sidebar-foreground">GTK GeoAI</h2>
@@ -47,7 +46,7 @@ export function AppSidebar() {
         {collapsed && (
           <div className="flex justify-center">
             <div className="h-8 w-8 rounded-lg bg-sidebar-primary flex items-center justify-center">
-              <Sparkles className="h-4 w-4 text-sidebar-primary-foreground" />
+              <Satellite className="h-4 w-4 text-sidebar-primary-foreground" />
             </div>
           </div>
         )}
