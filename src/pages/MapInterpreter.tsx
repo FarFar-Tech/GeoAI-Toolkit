@@ -48,7 +48,7 @@ export default function MapInterpreter() {
         }),
       });
 
-      if (!resp.ok) throw new Error(`Error ${resp.status}`);
+      if (!resp.ok) throw new Error("Error " + resp.status);
 
       const reader = resp.body?.getReader();
       if (!reader) throw new Error("No stream");
@@ -79,7 +79,7 @@ export default function MapInterpreter() {
         }
       }
     } catch (err: any) {
-      setAnalysis(`⚠️ ${err.message || "Analysis failed. Please ensure Lovable Cloud is enabled."}`);
+      setAnalysis("⚠️ " + (err.message || "Analysis failed. Please check your connection and try again."));
     } finally {
       setIsLoading(false);
     }

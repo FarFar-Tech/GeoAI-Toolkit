@@ -87,7 +87,7 @@ export function AppSidebar() {
       <SidebarFooter className="p-4">
         {!collapsed && (
           <div className="text-[10px] text-sidebar-foreground/40 space-y-1">
-            <p>Powered by Lovable AI</p>
+            <p>Powered by GTK GeoAI</p>
             <p>GTK Hakku Data Products</p>
           </div>
         )}
