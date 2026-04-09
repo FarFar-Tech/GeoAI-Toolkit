@@ -91,7 +91,7 @@ export function ChatInterface({ toolName, genAILabel, suggestedQuestions, system
         }
       }
     } catch (err: any) {
-      setMessages((prev) => [...prev, { role: "assistant", content: `⚠️ ${err.message || "setMessages((prev) => [...prev, { role: "assistant", content: `⚠️ ${err.message || "Failed to get response. Please check your connection and try again."}` }]);"}` }]);
+      setMessages((prev) => [...prev, { role: "assistant", content: "⚠️ " + (err.message || "Failed to get response. Please check your connection and try again.") }]);"}` }]);
     } finally {
       setIsLoading(false);
     }

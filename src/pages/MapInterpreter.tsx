@@ -79,7 +79,7 @@ export default function MapInterpreter() {
         }
       }
     } catch (err: any) {
-      setAnalysis(`⚠️ ${err.message || "setAnalysis(`⚠️ ${err.message || "Analysis failed. Please check your connection and try again."}`);"}`);
+      setAnalysis("⚠️ " + (err.message || "Analysis failed. Please check your connection and try again."));"}`);
     } finally {
       setIsLoading(false);
     }
