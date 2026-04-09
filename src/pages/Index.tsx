@@ -158,7 +158,7 @@ export default function Index() {
               <Satellite className="h-3.5 w-3.5" /> Generative AI for Geological Data
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "both" }}>
-              GTK GeoAI Toolkit
+              GeoAI Toolkit
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s", animationFillMode: "both" }}>
               Transforming GTK's geological and geospatial datasets into actionable insights

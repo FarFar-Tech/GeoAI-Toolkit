@@ -10,7 +10,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
         <div className="flex-1 flex flex-col min-w-0">
           <header className="h-12 flex items-center border-b border-border bg-background px-4 shrink-0">
             <SidebarTrigger className="mr-4" />
-            <span className="text-sm font-medium text-muted-foreground">GTK GeoAI Toolkit</span>
+            <span className="text-sm font-medium text-muted-foreground">GeoAI Toolkit</span>
             <div className="ml-auto">
               <ThemeToggle />
             </div>
