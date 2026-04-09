@@ -66,7 +66,35 @@ Five AI-based services or tools are proposed based on the GTK data and required 
 - Output: Ranked list of relevant GTK products with: product name and description, relevant score, license type, and data format.
 - Covers all 122 GTK products in the knowledge base
 
-## Getting Started 
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+You will need **Node.js** installed on your system. This project was built using the LTS version of Node.
+
+* **Download Node.js:** [https://nodejs.org/](https://nodejs.org/)
+* **Verify Installation:**
+  Open your terminal and run:
+  ```bash
+  node -v
+  npm -v
+
+### Installation & Setup
+1. Navigate to the project directory. Open your terminal (PowerShell, Command Prompt, or Bash) and move into the toolkit folder:
+```bash
+  cd "C:\path/GeoAI Toolkit"
+```
+2. Install dependencies Run the following command to download all necessary packages listed in the `package.json` file:
+```bash
+  npm install
+```
+3. Run the development server. Once the installation is complete, start the local development server:
+```bash
+  npm run dev
+```
+The application should now be running! Check the terminal output for the local URL (usually `http://localhost:5173` or `http://localhost:3000`).
 
 ## Web-app overview 
 <img width="800" height="700" alt="GeoAI Toolkit" src="images/fig2.png" />
