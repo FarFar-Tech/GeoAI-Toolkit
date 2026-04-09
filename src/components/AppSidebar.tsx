@@ -38,7 +38,7 @@ export function AppSidebar() {
               <Satellite className="h-4 w-4 text-sidebar-primary-foreground" />
             </div>
             <div>
-              <h2 className="text-sm font-bold text-sidebar-foreground">GTK GeoAI</h2>
+              <h2 className="text-sm font-bold text-sidebar-foreground">GeoAI</h2>
               <p className="text-[10px] text-sidebar-foreground/60">Toolkit v1.0</p>
             </div>
           </div>
@@ -87,8 +87,8 @@ export function AppSidebar() {
       <SidebarFooter className="p-4">
         {!collapsed && (
           <div className="text-[10px] text-sidebar-foreground/40 space-y-1">
-            <p>Powered by GTK GeoAI</p>
-            <p>GTK Hakku Data Products</p>
+            <p>Powered by GeoAI</p>
+            <p>Hakku Data Products</p>
           </div>
         )}
       </SidebarFooter>
