@@ -6,7 +6,9 @@ This is a small concept of how AI Generative can be a digital solution for compa
 
 ​💡✨​​ **Transforming Raw Data Into Actionable Insights** 📈​📊​🔍
 
-<img width="900" height="500" alt="GeoAI Toolkit" src="images/fig1.png" />
+<p align="center">
+  <img width="600" height="500" alt="GeoAI Toolkit" src="images/fig1.png" />
+</p>
 
 ## ⚡ Motivation 
 The [Hakku service](https://hakku.gtk.fi/en), as the primary gateway to Finland's geological data, contains a staggering diversity of information, including 17,000 publications, 12,000 photographs, and over 3,000 hand-drawn maps, alongside thousands of high-resolution spatial datasets. To transform this "dark data" into actionable insights, the deployment of GenAI must move beyond simple conversational agents toward robust, spatially-aware systems capable of multimodal reasoning across text, imagery, and vector databases. 
@@ -65,7 +67,9 @@ Five AI-based services or tools are proposed based on the GTK data and required 
 - Input: Free-text project description (e.g., "I am planning a geothermal energy feasibility study in southern Finland")
 - Output: Ranked list of relevant GTK products with: product name and description, relevant score, license type, and data format.
 - Covers all 122 GTK products in the knowledge base
-<img width="900" height="500" alt="GeoAI Toolkit" src="images/fig3.png" />
+<p align="center">
+  <img width="600" height="500" alt="GeoAI Toolkit" src="images/fig3.png" />
+</p>
 
 ## Getting Started
 
@@ -98,4 +102,6 @@ You will need **Node.js** installed on your system. This project was built using
 The application should now be running! Check the terminal output for the local URL (usually `http://localhost:5173` or `http://localhost:3000`).
 
 ## Web-app overview 
-<img width="800" height="700" alt="GeoAI Toolkit" src="images/fig2.png" />
+<p align="center">
+  <img width="600" height="500" alt="GeoAI Toolkit" src="images/fig2.png" />
+</p>
