@@ -41,6 +41,9 @@ Five AI-based services or tools are proposed based on the GTK data and required 
 - Suggested questions panel for quick start.
 - All responses cite specific GTK data products and recommend datasets.
 - Markdown-rendered responses with structured tables.
+<p align="center">
+  <img width="600" height="500" alt="GeoAI Toolkit" src="images/fig4.png" />
+</p>
 
 ### Tool 2️⃣​: Environmental Risk Screener 
 🎯​**Purpose:** AI Tool for environment management, assessing acid sulfate soils, groundwater vulnerability, and peatland carbon. 
