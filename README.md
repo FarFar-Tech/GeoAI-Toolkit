@@ -65,6 +65,7 @@ Five AI-based services or tools are proposed based on the GTK data and required 
 - Input: Free-text project description (e.g., "I am planning a geothermal energy feasibility study in southern Finland")
 - Output: Ranked list of relevant GTK products with: product name and description, relevant score, license type, and data format.
 - Covers all 122 GTK products in the knowledge base
+<img width="900" height="500" alt="GeoAI Toolkit" src="images/fig3.png" />
 
 ## Getting Started
 
