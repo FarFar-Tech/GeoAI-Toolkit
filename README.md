@@ -62,6 +62,9 @@ Five AI-based services or tools are proposed based on the GTK data and required 
 - Pre-loaded sample GTK map thumbnails (bedrock maps at various scales)
 - VLM-powered analysis that identifies: rock types, structural features (faults, folds, lineaments), and potential mineralization indicators
 - Side-by-side view: map image + AI interpretation panel
+<p align="center">
+  <img width="600" height="500" alt="GeoAI Toolkit" src="images/fig55.png" />
+</p>
 
 ### Tool 4️⃣​: GTK Data Product Recommender
 🎯​**Purpose:** Describe your project goals in natural language and get AI-recommended GTK datasets with justification. 
